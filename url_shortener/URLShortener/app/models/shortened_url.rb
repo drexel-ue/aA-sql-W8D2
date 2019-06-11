@@ -19,4 +19,20 @@ class ShortenedUrl < ApplicationRecord
 
     end
 
+    def self.random_code(long_url)
+        loop do
+            short_url = SecureRandom::urlsafe_base64((long_url.length - 4) / 2)
+            return short_url unless ShortenedUrl.exists?(short_url: short_url)
+        end
+    end
+
+    def self.factory_user_and_longurl(user, long_url)
+        short_url = ShortenedUrl.random_code(long_url) + '.com'
+        ShortenedUrl.create!(
+            user_id: user.id,
+            short_url: short_url,
+            long_url: long_url
+        )
+    end
+
 end
