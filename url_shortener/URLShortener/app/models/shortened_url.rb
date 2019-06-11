@@ -62,4 +62,8 @@ class ShortenedUrl < ApplicationRecord
         visits.length
     end
 
+    def num_uniques
+       visits.select('user_id').distinct.count 
+    end
+
 end
