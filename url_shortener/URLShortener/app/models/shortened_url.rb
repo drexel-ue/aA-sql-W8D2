@@ -27,6 +27,9 @@ class ShortenedUrl < ApplicationRecord
         foreign_key: :url_id,
         primary_key: :id
 
+    has_many :visitors,
+        through: :visits,
+        source: :visitor
 
     def check_urls
 
