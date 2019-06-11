@@ -1,0 +1,33 @@
+  [1m[35m (1158.2ms)[0m  [1m[35mCREATE DATABASE "URLShortener_development" ENCODING = 'unicode'[0m
+  ↳ /Users/ikeshpack/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/subscriber.rb:101
+  [1m[35m (1312.6ms)[0m  [1m[35mCREATE DATABASE "URLShortener_test" ENCODING = 'unicode'[0m
+  ↳ /Users/ikeshpack/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/subscriber.rb:101
+  [1m[35m (10.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/ikeshpack/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/subscriber.rb:101
+  [1m[35m (44.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ /Users/ikeshpack/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/subscriber.rb:101
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4762635147840476445)[0m
+  ↳ /Users/ikeshpack/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/subscriber.rb:101
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ikeshpack/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/subscriber.rb:101
+Migrating to CreateUsers (20190611204759)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/ikeshpack/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/subscriber.rb:101
+  [1m[35m (48.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ /Users/ikeshpack/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/subscriber.rb:101
+  [1m[36mActiveRecord::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190611204759"]]
+  ↳ /Users/ikeshpack/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/subscriber.rb:101
+  [1m[35m (41.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/ikeshpack/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/subscriber.rb:101
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/ikeshpack/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/subscriber.rb:101
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/ikeshpack/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/subscriber.rb:101
+  [1m[36mActiveRecord::InternalMetadata Create (1.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-06-11 20:50:15.767262"], ["updated_at", "2019-06-11 20:50:15.767262"]]
+  ↳ /Users/ikeshpack/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/subscriber.rb:101
+  [1m[35m (43.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/ikeshpack/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/subscriber.rb:101
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(4762635147840476445)[0m
+  ↳ /Users/ikeshpack/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/subscriber.rb:101
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ikeshpack/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/activesupport-5.2.3/lib/active_support/subscriber.rb:101
