@@ -28,6 +28,7 @@ class ShortenedUrl < ApplicationRecord
         primary_key: :id
 
     has_many :visitors,
+        # -> { distinct },
         through: :visits,
         source: :visitor
 
@@ -69,4 +70,10 @@ class ShortenedUrl < ApplicationRecord
        visits.select('user_id').distinct.count 
     end
 
+    def num_recent_uniques
+        visits.where('created_at < ?', 10.minutes.ago).select('user_id').distinct.count 
+    end
+
 end
+
+# where("posts.created_at < ?", Time.now)
