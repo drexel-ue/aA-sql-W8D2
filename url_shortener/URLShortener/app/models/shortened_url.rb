@@ -22,6 +22,10 @@ class ShortenedUrl < ApplicationRecord
         primary_key: :id,
         foreign_key: :user_id
 
+    has_many :visits,
+        class_name: :Visit,
+        foreign_key: :url_id,
+        primary_key: :id
 
 
     def check_urls
@@ -52,6 +56,10 @@ class ShortenedUrl < ApplicationRecord
             short_url: short_url,
             long_url: long_url
         )
+    end
+
+    def num_clicks
+        visits.length
     end
 
 end
